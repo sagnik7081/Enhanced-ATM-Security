@@ -1,0 +1,31 @@
+pandas 
+tensorflow 
+keras 
+torch 
+torchvision 
+torchaudio 
+mtcnn 
+scikit-learn 
+joblib  
+Flask-SQLAlchemy 
+Flask-Mail 
+Flask-WTF 
+requests  
+# yagmail 
+pillow 
+tqdm 
+pandas-ta
+# deepface
+# iresnet50
+Flask==2.2.3
+Flask-SocketIO==5.3.3
+python-dotenv==1.0.0
+Werkzeug==2.2.3
+requests==2.28.2
+opencv-python==4.7.0.72
+numpy==1.24.2
+insightface==0.7.3
+scipy==1.10.1
+twilio==8.0.0
+python-engineio==4.4.1
+python-socketio==5.8.0

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Security - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>ATM Security</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active" data-target="pending-section">
+                        <span class="icon">📋</span>
+                        <span class="nav-text">Pending Requests</span>
+                        <span class="badge" id="pending-count">0</span>
+                    </li>
+                    <li data-target="authorized-section">
+                        <span class="icon">✅</span>
+                        <span class="nav-text">Authorized Users</span>
+                        <span class="badge" id="authorized-count">0</span>
+                    </li>
+                    <li data-target="banned-section">
+                        <span class="icon">⛔</span>
+                        <span class="nav-text">Banned Users</span>
+                        <span class="badge" id="banned-count">0</span>
+                    </li>
+                    <li data-target="settings-section">
+                        <span class="icon">⚙️</span>
+                        <span class="nav-text">Settings</span>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="/logout" class="logout-btn">
+                    <span class="icon">🚪</span>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="dashboard-header">
+                <h1 id="section-title">Pending Requests</h1>
+                <div class="user-info">
+                    <span>Welcome, {{ session.username }}</span>
+                </div>
+            </header>
+
+            <!-- Pending Requests Section -->
+            <section id="pending-section" class="dashboard-section active">
+                <div class="section-header">
+                    <h2>Pending Authorization Requests</h2>
+                    <button id="refresh-pending" class="btn-secondary">Refresh</button>
+                </div>
+                <div class="cards-container" id="pending-container">
+                    <div class="loading">Loading requests...</div>
+                </div>
+            </section>
+
+            <!-- Authorized Users Section -->
+            <section id="authorized-section" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Authorized Users</h2>
+                    <button id="refresh-authorized" class="btn-secondary">Refresh</button>
+                </div>
+                <div class="cards-container" id="authorized-container">
+                    <div class="loading">Loading authorized users...</div>
+                </div>
+            </section>
+
+            <!-- Banned Users Section -->
+            <section id="banned-section" class="dashboard-section">
+                <div class="section-header">
+                    <h2>Banned Users</h2>
+                    <button id="refresh-banned" class="btn-secondary">Refresh</button>
+                </div>
+                <div class="cards-container" id="banned-container">
+                    <div class="loading">Loading banned users...</div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings-section" class="dashboard-section">
+                <div class="section-header">
+                    <h2>System Settings</h2>
+                </div>
+                <div class="settings-container">
+                    <div class="settings-card">
+                        <h3>Admin Account</h3>
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <input type="password" id="confirm-password">
+                        </div>
+                        <button class="btn-primary">Update Password</button>
+                    </div>
+                    <div class="settings-card">
+                        <h3>Notification Settings</h3>
+                        <div class="form-group">
+                            <label for="email-alert">Email for Alerts</label>
+                            <input type="email" id="email-alert" placeholder="youremail@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone-alert">Phone for SMS Alerts</label>
+                            <input type="tel" id="phone-alert" placeholder="+1234567890">
+                        </div>
+                        <button class="btn-primary">Save Settings</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Notification modal -->
+    <div class="notification-modal" id="notification-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>New Unauthorized Access Attempt!</h3>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="face-info">
+                    <img id="modal-face-image" src="" alt="Face detected">
+                    <div class="face-details">
+                        <p>Face ID: <span id="modal-face-id"></span></p>
+                        <p>Time: <span id="modal-timestamp"></span></p>
+                    </div>
+                </div>
+                <p class="alert-message">An unauthorized person is attempting to access the ATM. What would you like to do?</p>
+            </div>
+            <div class="modal-footer">
+                <button id="modal-ban" class="btn-danger">Ban User</button>
+                <button id="modal-approve" class="btn-success">Approve User</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
