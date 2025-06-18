@@ -89,7 +89,7 @@ atm-security-system/
 ## ⚙️ Installation (The Fun Setup!) ⚙️
 
 # 1. Clone the repo
-git clone https://github.com/sagnik7081/Enhanced-Atm-Security.git
+git clone https://github.com/sagnik7081/Enhanced-ATM-Security
 cd Enhanced-Atm-Security
 
 # 2. Setup virtual environment
