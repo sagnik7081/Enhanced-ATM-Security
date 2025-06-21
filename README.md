@@ -2,7 +2,7 @@
 
 # 🎪 ATM Security System with Facial Recognition 🚨🔒
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=2000&pause=500&color=FF6B35&center=true&vCenter=true&multiline=true&width=800&height=120&lines=🤖+BEEP+BOOP!+DETECTING+FACES!+🤖;👁️+WATCHING+YOU+ALWAYS!+👁️;🎭+Most+Fun+Security+System+Ever!+🎭" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=2000&pause=500&color=FF6B35&center=true&vCenter=true&multiline=true&width=800&height=120&lines=🤖+BEEP+BOOP!+DETECTING+FACES!+🤖;👁️+WATCHING+YOU+ALWAYS!+👁️" alt="Typing SVG" />
 
 <div style="font-size: 20px; margin: 20px 0;">
  ╔══════════════════════════════╗<br>
