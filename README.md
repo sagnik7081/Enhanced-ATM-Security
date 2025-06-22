@@ -331,29 +331,6 @@ Want to be part of this amazing security carnival? We'd love to have you aboard!
 
 </div>
 
----
-
-## 🎉 Fun Stats & Achievements 🏆
-
-<div align="center">
-
-<img src="https://user-images.githubusercontent.com/74038190/212284175-acc7d32c-9d32-462f-8ff7-253bfdd3f7a3.gif" width="200">
-
-<table>
-<tr>
-<td align="center">
-<img src="https://img.shields.io/badge/Faces%20Detected-1000+-brightgreen?style=for-the-badge&logo=eye&logoColor=white">
-</td>
-<td align="center">
-<img src="https://img.shields.io/badge/Security%20Level-Maximum-red?style=for-the-badge&logo=shield&logoColor=white">
-</td>
-<td align="center">
-<img src="https://img.shields.io/badge/Fun%20Factor-Over%209000-purple?style=for-the-badge&logo=rocket&logoColor=white">
-</td>
-</tr>
-</table>
-
-</div>
 
 ---
 
