@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎪 SentinelVaultX and ATM Security System 🚨🔒
+# 🎪 SentinelVaultX an ATM Security System 🚨🔒
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=2000&pause=500&color=FF6B35&center=true&vCenter=true&multiline=true&width=800&height=120&lines=🤖+BEEP+BOOP!+DETECTING+FACES!+🤖;👁️+WATCHING+YOU+ALWAYS!+👁️" alt="Typing SVG" />
 
